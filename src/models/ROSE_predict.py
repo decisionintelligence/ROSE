@@ -1,5 +1,5 @@
 
-__all__ = ['ReadyTS']
+__all__ = ['ROSE']
 
 # Cell
 from typing import Callable, Optional
@@ -24,7 +24,7 @@ from einops import reduce, rearrange, repeat
 
 
 # Cell
-class ReadyTS(nn.Module):
+class ROSE(nn.Module):
     """
     Output dimension: 
          [bs x target_dim x nvars] for prediction
