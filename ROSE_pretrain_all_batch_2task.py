@@ -6,7 +6,7 @@ import os
 import torch
 from torch import nn
 
-from src.models.ReadyTS import ReadyTS
+from src.models.ROSE import ROSE
 from src.learner_2task_4predicthead import Learner, transfer_weights
 from src.callback.tracking_2task_4predicthead import *
 from src.callback.patch_mask_2task_predict import *
@@ -93,7 +93,7 @@ def get_model(c_in, args):
     print('number of patches:', num_patch)
     
     # get model
-    model = ReadyTS(c_in=c_in,
+    model = ROSE(c_in=c_in,
                 target_dim=args.target_points,
                 patch_len=args.patch_len,
                 stride=args.stride,
