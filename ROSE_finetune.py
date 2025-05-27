@@ -6,7 +6,7 @@ import os
 import torch
 from torch import nn
 
-from src.models.ReadyTS_lowrank import ReadyTS
+from src.models.ROSE_lowrank import ROSE
 # from src.models.patchTST import PatchTST
 from src.learner_pvq import Learner, transfer_weights
 from src.callback.core import *
@@ -90,7 +90,7 @@ def get_model(c_in, args, head_type, weight_path=None):
     print('number of patches:', num_patch)
     
     # get model
-    model = ReadyTS(c_in=c_in,
+    model = ROSE(c_in=c_in,
                 target_dim=args.target_points,
                 patch_len=args.patch_len,
                 stride=args.stride,
