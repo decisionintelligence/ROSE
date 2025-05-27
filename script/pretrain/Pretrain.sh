@@ -9,9 +9,9 @@ if [ ! -d "logs/LongForecasting/pretrain_bigmodel" ]; then
     mkdir logs/LongForecasting/pretrain_bigmodel
 fi
 
-model_name='ReadyTS_mfm_register'
+model_name='ROSE_mfm_register'
 dset_path='pretrain_data'
-python -u ReadyTS_pretrain_all_batch_2task.py \
+python -u ROSE_pretrain_all_batch_2task.py \
     --context_points 512 \
     --target_points 720 \
     --batch_size 8192\
