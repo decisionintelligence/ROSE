@@ -34,7 +34,7 @@ do
             mkdir logs/LongForecasting/$model_type/$dset
         fi
 
-        python -u ReadyTS_finetune.py \
+        python -u ROSE_finetune.py \
         --is_finetune $is_all \
         --is_linear_probe $is_linear_probe \
         --dset_finetune $dset \
